@@ -1,4 +1,4 @@
-module aranya/ara-controller
+module ara-controller
 
 go 1.12
 
@@ -28,9 +28,12 @@ require (
 	golang.org/x/tools v0.0.0-20190911022129-16c5e0f7d110 // indirect
 	gopkg.in/check.v1 v1.0.0-20190902080502-41f04d3bba15 // indirect
 	gopkg.in/inf.v0 v0.9.1 // indirect
+	k8s.io/api v0.0.0-20190831074750-7364b6bdad65
 	k8s.io/apimachinery v0.0.0-20190831074630-461753078381
+	k8s.io/client-go v0.0.0-20190831074946-3fe2abece89e
 	k8s.io/code-generator v0.0.0-20190831074504-732c9ca86353
 	k8s.io/gengo v0.0.0-20190907103519-ebc107f98eab // indirect
+	k8s.io/klog v0.4.0
 	k8s.io/sample-controller v0.0.0-20190831080103-b17b22266fdc // indirect
 	sigs.k8s.io/structured-merge-diff v0.0.0-20190820212518-960c3cc04183 // indirect
 )

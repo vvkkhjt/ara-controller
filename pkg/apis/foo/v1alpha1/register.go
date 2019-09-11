@@ -1,7 +1,7 @@
 package v1alpha1
 
 import (
-	"aranya/ara-controller/pkg/apis/foo"
+	"ara-controller/pkg/apis/foo"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"

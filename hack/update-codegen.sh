@@ -25,7 +25,7 @@ set -o pipefail
 ../vendor/k8s.io/code-generator/generate-groups.sh \
   "deepcopy,client,informer,lister" \
   ara-controller/pkg/client \
-  ara-controller/pkg/api \
+  ara-controller/pkg/apis \
   foo:v1alpha1 \
   --go-header-file $(pwd)/boilerplate.go.txt \
   --output-base $(pwd)/../../
