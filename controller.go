@@ -37,10 +37,10 @@ import (
 	"k8s.io/klog"
 
 	samplev1alpha1 "ara-controller/pkg/apis/foo/v1alpha1"
-	clientset "ara-controller/pkg/client/clientset/versioned"
+	sampleclientset "ara-controller/pkg/client/clientset/versioned"
 	samplescheme "ara-controller/pkg/client/clientset/versioned/scheme"
-	informers "ara-controller/pkg/client/informers/externalversions/foo/v1alpha1"
-	listers "ara-controller/pkg/client/listers/foo/v1alpha1"
+	sampleinformers "ara-controller/pkg/client/informers/externalversions/foo/v1alpha1"
+	samplelisters "ara-controller/pkg/client/listers/foo/v1alpha1"
 )
 
 const controllerAgentName = "sample-controller"
@@ -65,11 +65,11 @@ type Controller struct {
 	// kubeclientset is a standard kubernetes clientset
 	kubeclientset kubernetes.Interface
 	// sampleclientset is a clientset for our own API group
-	sampleclientset clientset.Interface
+	sampleclientset sampleclientset.Interface
 
 	deploymentsLister appslisters.DeploymentLister
 	deploymentsSynced cache.InformerSynced
-	foosLister        listers.FooLister
+	foosLister        samplelisters.FooLister
 	foosSynced        cache.InformerSynced
 
 	// workqueue is a rate limited work queue. This is used to queue work to be
@@ -86,9 +86,9 @@ type Controller struct {
 // NewController returns a new sample controller
 func NewController(
 	kubeclientset kubernetes.Interface,
-	sampleclientset clientset.Interface,
+	sampleclientset sampleclientset.Interface,
 	deploymentInformer appsinformers.DeploymentInformer,
-	fooInformer informers.FooInformer) *Controller {
+	fooInformer sampleinformers.FooInformer) *Controller {
 
 	// Create event broadcaster
 	// Add sample-controller types to the default Kubernetes Scheme so Events can be
